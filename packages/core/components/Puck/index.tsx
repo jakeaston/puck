@@ -338,7 +338,7 @@ function PuckProvider<
     initialAppState,
   });
 
-  const previousData = useRef<Data>(null);
+  const previousData = useRef<Data>(null) as { current: Data | null };
 
   useEffect(() => {
     appStore.subscribe(
